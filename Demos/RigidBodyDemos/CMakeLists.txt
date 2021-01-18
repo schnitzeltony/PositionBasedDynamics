@@ -44,6 +44,7 @@ set_target_properties(ChainDemo PROPERTIES RELWITHDEBINFO_POSTFIX ${PBD_BINARY_R
 set_target_properties(ChainDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(ChainDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(ChainDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS ChainDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 
 add_executable(JointDemo
@@ -66,6 +67,7 @@ set_target_properties(JointDemo PROPERTIES RELWITHDEBINFO_POSTFIX ${PBD_BINARY_R
 set_target_properties(JointDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(JointDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(JointDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS JointDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 add_definitions(-DTW_NO_LIB_PRAGMA -DTW_STATIC -DFREEGLUT_LIB_PRAGMAS=0)
 find_package( Eigen3 REQUIRED )

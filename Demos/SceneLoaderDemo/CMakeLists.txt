@@ -54,6 +54,7 @@ set_target_properties(SceneLoaderDemo PROPERTIES RELWITHDEBINFO_POSTFIX ${PBD_BI
 set_target_properties(SceneLoaderDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(SceneLoaderDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(SceneLoaderDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS SceneLoaderDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 
 add_definitions(-DTW_NO_LIB_PRAGMA -DTW_STATIC -DFREEGLUT_LIB_PRAGMAS=0)

@@ -51,4 +51,5 @@ set_target_properties(CosseratRodsDemo PROPERTIES RELWITHDEBINFO_POSTFIX ${PBD_B
 set_target_properties(CosseratRodsDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(CosseratRodsDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(CosseratRodsDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS CosseratRodsDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 VIS_SOURCE_GROUPS()

@@ -45,6 +45,7 @@ set_target_properties(ClothCollisionDemo PROPERTIES RELWITHDEBINFO_POSTFIX ${PBD
 set_target_properties(ClothCollisionDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(ClothCollisionDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(ClothCollisionDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS ClothCollisionDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 
 add_executable(DeformableCollisionDemo
@@ -67,6 +68,7 @@ set_target_properties(DeformableCollisionDemo PROPERTIES RELWITHDEBINFO_POSTFIX 
 set_target_properties(DeformableCollisionDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(DeformableCollisionDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(DeformableCollisionDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS DeformableCollisionDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 
 add_executable(RigidBodyCollisionDemo
@@ -89,6 +91,7 @@ set_target_properties(RigidBodyCollisionDemo PROPERTIES RELWITHDEBINFO_POSTFIX $
 set_target_properties(RigidBodyCollisionDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(RigidBodyCollisionDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(RigidBodyCollisionDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS RigidBodyCollisionDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 
 add_definitions(-DTW_NO_LIB_PRAGMA -DTW_STATIC -DFREEGLUT_LIB_PRAGMAS=0)

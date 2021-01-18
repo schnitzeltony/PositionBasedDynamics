@@ -75,6 +75,7 @@ set_target_properties(GenericParticleConstraintsDemo PROPERTIES RELWITHDEBINFO_P
 set_target_properties(GenericParticleConstraintsDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(GenericParticleConstraintsDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(GenericParticleConstraintsDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS GenericParticleConstraintsDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 set_target_properties(GenericRigidBodyConstraintsDemo PROPERTIES FOLDER "Demos")
 set_target_properties(GenericRigidBodyConstraintsDemo PROPERTIES DEBUG_POSTFIX ${PBD_BINARY_DEBUG_POSTFIX})
@@ -82,5 +83,6 @@ set_target_properties(GenericRigidBodyConstraintsDemo PROPERTIES RELWITHDEBINFO_
 set_target_properties(GenericRigidBodyConstraintsDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(GenericRigidBodyConstraintsDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(GenericRigidBodyConstraintsDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS GenericRigidBodyConstraintsDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 VIS_SOURCE_GROUPS()

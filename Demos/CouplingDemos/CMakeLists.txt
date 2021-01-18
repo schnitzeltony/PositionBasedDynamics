@@ -44,7 +44,7 @@ set_target_properties(RigidBodyClothCouplingDemo PROPERTIES RELWITHDEBINFO_POSTF
 set_target_properties(RigidBodyClothCouplingDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(RigidBodyClothCouplingDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(RigidBodyClothCouplingDemo ${SIMULATION_LINK_LIBRARIES})
-
+install(TARGETS RigidBodyClothCouplingDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 add_definitions(-DTW_NO_LIB_PRAGMA -DTW_STATIC -DFREEGLUT_LIB_PRAGMAS=0)
 find_package( Eigen3 REQUIRED )

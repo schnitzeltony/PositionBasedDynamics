@@ -57,6 +57,7 @@ set_target_properties(ElasticRodDemo PROPERTIES RELWITHDEBINFO_POSTFIX ${PBD_BIN
 set_target_properties(ElasticRodDemo PROPERTIES MINSIZEREL_POSTFIX ${PBD_BINARY_MINSIZEREL_POSTFIX})
 add_dependencies(ElasticRodDemo ${SIMULATION_DEPENDENCIES})
 target_link_libraries(ElasticRodDemo ${SIMULATION_LINK_LIBRARIES})
+install(TARGETS ElasticRodDemo RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 
 VIS_SOURCE_GROUPS()
