@@ -1,3 +1,5 @@
 lib/
 bin/
 !bin/*.bat
+CMakeLists.txt.user*
+Utils/Version.h
